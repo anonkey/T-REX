@@ -16,14 +16,20 @@ const config: HardhatUserConfig = {
       },
     },
   },
+  defaultNetwork: 'localhost',
   gasReporter: {
     enabled: true,
   },
   dodoc: {
     runOnCompile: false,
     debugMode: true,
-    outputDir: "./docgen",
+    outputDir: './docgen',
     freshOutput: true,
+  },
+  networks: {
+    localhost: {
+      url: 'http://localhost:8545',
+    },
   },
 };
 
